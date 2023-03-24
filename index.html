@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- <link rel="stylesheet" href="./css/index.css"> -->
+    <style>
+        :root
+        {
+            --black: #111111;
+            --red: #fe4655;
+            --dark-blue: #0f1923;
+            --white: #ebe7e0;
+        }
+        *
+        {
+            padding: 0;
+            margin: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+        @font-face {
+            font-family: 'Mi fuente';
+            src: url(./Valorant\ Font.ttf) format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        body
+        {
+            width: 100%;
+            height: 100vh;
+            background-color: var(--dark-blue);
+        }
+        .navbar
+        {
+            display: flex;
+            background: var(--dark-blue);
+            justify-content: space-between;
+            width: 100%;
+            height: 10%;
+            align-items: center;
+            padding: 10px;
+            position: fixed;
+            z-index: 2;
+        }
+        .logo
+        {   
+            display: flex;
+            align-items: center;
+        }
+        .logo img 
+        {
+            height: 80px;
+        }
+        .ul
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            flex-grow: 1;
+            height: 80%;
+        }
+        .ul li
+        {
+            color: var(--white);
+            list-style: none;
+            margin: 0 80px;
+        }
+        .ul li a
+        {
+            text-decoration: none;
+        }
+        .menu-item
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid var(--dark-blue);
+            box-shadow: 2px 2px 5px var(--black);
+            cursor: pointer;
+            position: relative;
+        }
+        .submenu
+        {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 150px;
+            background-color: var(--dark-blue);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .menu-item:hover .submenu
+        {
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu-item span
+        {
+            font-family: 'Mi fuente', sans-serif;
+            color: var(--white);
+        }
+        .menu-item:hover
+        {
+            color: var(--red);
+            transform: scale(1.1);
+            background-color: var(--white);
+        }
+        .menu-item:hover span
+        {
+            color: var(--red);
+        }
+        .submenu li 
+        {
+            padding: 10px;
+        }
+        .submenu li a
+        {
+            color: var(--white);
+            font-family: 'Mi fuente', sans-serif;
+            white-space: pre-line;
+        }
+        .submenu li a:hover 
+        {
+            color: var(--red);
+            
+        }
+        .todo
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            padding-top: 10%;
+        }
+        .bienvenida
+        {
+            margin-top: 10vh;
+            width: 100%;
+            height: auto;
+            align-content: center;
+            align-items: center;
+        }
+        h1
+        {
+            font-family: 'Mi fuente', sans-serif;
+            white-space: pre-line;
+            color: var(--white);
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://us.123rf.com/450wm/alexey156/alexey1562008/alexey156200800116/154002737-valorant-game-logo-icon-vector-gaming-streamer.jpg?ver=6" alt="logo">
+        </div>
+        
+        <ul class="ul">
+            <li>
+                <div class="menu-item">
+                    <a href="">
+                        <span>Armas</span>
+                    </a>
+                    <div class="submenu weapons">
+                        <ul>
+                         
+                            
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <a href="">
+                        <span>Agentes</span>
+                    </a>
+                    <div class="submenu agents">
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="menu-item">
+                    <a href="">
+                        <span>Mapas</span>
+                    </a>
+                    <div class="submenu maps">
+                        <ul>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="todo">
+        <div class="bienvenida">
+            <h1>
+                Bienvenido a la pagina de informacion de valorant
+                En el menu de arriba tienes
+                yooooooooooooooyoyoyoyooyooyoyyo
+            </h1>
+        </div>
+        <div class="divMaps">
+            <h1>
+                Mapas
+            </h1>
+            
+        </div>
+        <div class="divWeapons">
+            <h1>
+                Armas
+            </h1>
+            <p>
+            </p>
+        </div>
+        <div class="divAgents">
+            <h1>
+                Agentes
+            </h1>
+            <p>
+                
+            </p>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
